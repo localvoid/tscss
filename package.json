@@ -1,0 +1,43 @@
+{
+  "name": "tscss",
+  "main": "index.js",
+  "bin": {
+    "tscss": "index.js"
+  },
+  "version": "0.1.0",
+  "description": "TypeScript definition generator for Modular CSS.",
+  "license": "MIT",
+  "author": {
+    "name": "Boris Kaul",
+    "email": "localvoid@gmail.com",
+    "url": "https://github.com/localvoid"
+  },
+  "keywords": [
+    "typescript",
+    "definition",
+    "modular",
+    "css"
+  ],
+  "homepage": "https://github.com/localvoid/tscss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/localvoid/tscss"
+  },
+  "bugs": {
+    "url": "https://github.com/localvoid/tscss/issues"
+  },
+  "github": "https://github.com/localvoid/tscss",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "esutils": "^2.0.2",
+    "minimist": "^1.2.0",
+    "modular-css-core": "^6.0.2",
+    "sane": "^2.0.0"
+  },
+  "devDependencies": {}
+}
