@@ -4,7 +4,7 @@
   "bin": {
     "tscss": "index.js"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "TypeScript definition generator for Modular CSS.",
   "license": "MIT",
   "author": {
@@ -36,8 +36,8 @@
   "dependencies": {
     "esutils": "^2.0.2",
     "minimist": "^1.2.0",
-    "modular-css-core": "^6.0.2",
-    "sane": "^2.0.0"
+    "modular-css-core": "^8.1.0",
+    "sane": "^2.4.1"
   },
   "devDependencies": {}
 }
