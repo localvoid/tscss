@@ -115,11 +115,15 @@ function generateFile(result) {
   });
 
   const filePath = resolveFilePath(result.file);
-  const prevContent = fs.readFileSync(filePath);
-  if (
-    crypto.createHash("sha1").update(content).digest("base64") !==
-    crypto.createHash("sha1").update(prevContent).digest("base64")
-  ) {
+  let write = true;
+  if (fs.existsSync(filePath)) {
+    const prevContent = fs.readFileSync(filePath);
+    write = (
+      crypto.createHash("sha1").update(content).digest("base64") !==
+      crypto.createHash("sha1").update(prevContent).digest("base64")
+    );
+  }
+  if (write) {
     fs.writeFileSync(filePath, content);
     process.stdout.write(chalk.green(`  ${relativeFilePath(filePath)} generated\n`));
   }
@@ -140,7 +144,6 @@ if (argv["watch"]) {
   const watcher = sane(process.cwd(), { glob: [globPath] });
 
   function watch() {
-
     watcher.on("ready", function () {
       generate(queue, globPath);
       process.stdout.write(chalk.underline(`Started watching: ${globPath}\n\n`));
