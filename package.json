@@ -1,10 +1,23 @@
 {
   "name": "tscss",
+  "version": "0.2.1",
   "main": "index.js",
   "bin": {
     "tscss": "index.js"
   },
-  "version": "0.2.1",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "esutils": "^2.0.2",
+    "minimist": "^1.2.0",
+    "modular-css-core": "^10.0.0",
+    "sane": "^2.5.2"
+  },
+  "devDependencies": {},
   "description": "TypeScript definition generator for Modular CSS.",
   "license": "MIT",
   "author": {
@@ -26,18 +39,5 @@
   "bugs": {
     "url": "https://github.com/localvoid/tscss/issues"
   },
-  "github": "https://github.com/localvoid/tscss",
-  "files": [
-    "index.js",
-    "README.md",
-    "LICENSE"
-  ],
-  "scripts": {},
-  "dependencies": {
-    "esutils": "^2.0.2",
-    "minimist": "^1.2.0",
-    "modular-css-core": "^8.1.0",
-    "sane": "^2.4.1"
-  },
-  "devDependencies": {}
+  "github": "https://github.com/localvoid/tscss"
 }
